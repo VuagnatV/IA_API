@@ -129,7 +129,7 @@ async def predict(request: PredictionRequest):
 
 
 # Récupération de la clé API OpenAI
-OPENAI_API_KEY = os.getenv("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")
+OPENAI_API_KEY = os.getenv("your_api_key")
 OPENAI_API_URL = "https://api.openai.com/v1/engines/davinci-codex/completions"
 
 # Modèle Pydantic pour la requête de l'utilisateur
@@ -165,7 +165,7 @@ async def get_game_by_year(year: int):
 @app.get("/games/{year}")
 async def get_games_by_year(year: int):
     client = OpenAI(
-        api_key= "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"
+        api_key= "your_api_key"
     )
 
     response = client.chat.completions.create(
